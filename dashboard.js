@@ -62,7 +62,6 @@ tableHover.classList.add('table-hover');
 // 7. Add the "success" class to the 7th - 10th row of the table, like: <tr class="success">...</tr>
 
 var rows = document.querySelectorAll('tr');
-console.log(rows);
 
 rows.forEach(function(row, i) {
     if (i >= 7 && i <=10) {
@@ -72,8 +71,26 @@ rows.forEach(function(row, i) {
 
 // 8. Change the table header names to: ID, First Name, Last Name, Department, Client.
 
+var id = document.querySelectorAll('th')[0];
+id.innerText = 'ID';
+
+var firstName = document.querySelectorAll('th')[1];
+firstName.innerText = 'First Name';
+
+var lasttName = document.querySelectorAll('th')[2];
+lasttName.innerText = 'Last Name';
+
+var department = document.querySelectorAll('th')[3];
+department.innerText = 'Department';
+
+var client = document.querySelectorAll('th')[4];
+client.innerText = 'Client';
 
 // 9. Make an array of objects, each object representing a single row in the table. Remove the commas from the ID column and convert it to an actual Number data type. Example: [{id: 1001, firstName: 'Lorem', lastName: 'ipsum', department: 'dolor', client: 'sit'}]
 
 
+
 // 10. Make each word in the table capitalized.
+
+// var tableData = document.querySelectorAll('td');
+// tableData.innerText.toUpperCase(); 
