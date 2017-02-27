@@ -9,7 +9,6 @@ button.title = 'Click Me!!!!';
 //     alert(button.title + ' - the title is amazing.');
 // }
 
-
 // The destructive way to change the HTML class attribute
 // button.className = 'btn-success';
 
