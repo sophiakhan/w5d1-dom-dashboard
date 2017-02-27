@@ -64,5 +64,6 @@ function appendFirstNameInput() {
 
 // querySelectorAll typically gives you a NodeList data type, that only has .length and .forEach()
 // Optionally, Array.from() will convert NodeList to a full Array data type if you need to use .map, .filter, .slice, etc.
+
 // console.dir(buttons);
 // buttons = Array.from(buttons);

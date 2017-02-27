@@ -52,13 +52,23 @@ reviewTab.classList.add('active');
 // 5. Set the default search input value to "Q4 sales".
 
 var searchInput = document.querySelector('.form-control');
-searchInput.value = "Q4 Sales"
+searchInput.value = "Q4 Sales";
 
 // 6. Add the "table-hover" class to the table. See the Bootstrap table docs.
 
+var tableHover = document.querySelector('.table');
+tableHover.classList.add('table-hover');
 
 // 7. Add the "success" class to the 7th - 10th row of the table, like: <tr class="success">...</tr>
 
+var rows = document.querySelectorAll('tr');
+console.log(rows);
+
+rows.forEach(function(row, i) {
+    if (i >= 7 && i <=10) {
+        row.classList.add('success');
+    }
+});
 
 // 8. Change the table header names to: ID, First Name, Last Name, Department, Client.
 
