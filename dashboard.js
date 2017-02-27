@@ -42,9 +42,17 @@ fallPrice.innerText = _randomCurrency(10000);
 
 // 4. Change the currently selected left side menu item from Overview to Reports.
 
+//var activePage = document.querySelector.innerText='Overview';
+var overviewTab = document.getElementsByTagName('li')[4];
+overviewTab.classList.remove('active');
+
+var reviewTab = document.getElementsByTagName('li')[5];
+reviewTab.classList.add('active');
 
 // 5. Set the default search input value to "Q4 sales".
 
+var searchInput = document.querySelector('.form-control');
+searchInput.value = "Q4 Sales"
 
 // 6. Add the "table-hover" class to the table. See the Bootstrap table docs.
 
