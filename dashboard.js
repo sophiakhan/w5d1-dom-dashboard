@@ -88,9 +88,25 @@ client.innerText = 'Client';
 
 // 9. Make an array of objects, each object representing a single row in the table. Remove the commas from the ID column and convert it to an actual Number data type. Example: [{id: 1001, firstName: 'Lorem', lastName: 'ipsum', department: 'dolor', client: 'sit'}]
 
+var arrayObjects = document.querySelectorAll('tbody tr')
+arrayObjects = Array.from(arrayObjects).map(function(arrayObject) {
+   return {
+       id: Number(arrayObject.children[0].innerHTML.replace(',', '')),
+       firstName: arrayObject.children[1].innerHTML,
+       lastName: arrayObject.children[2].innerHTML,
+       department: arrayObject.children[3].innerHTML,
+       client: arrayObject.children[4].innerHTML,
+   }
+   rowOfObjects.push(rowOfObject)
+})
 
+console.log(arrayObjects);
 
 // 10. Make each word in the table capitalized.
 
-// var tableData = document.querySelectorAll('td');
-// tableData.innerText.toUpperCase(); 
+var tableData = document.querySelectorAll('tr td');
+tableData.innerText.toString().toUpperCase();
+
+console.log(tableData);
+
+//cant figure out how to turn innerText into a string to target! 
