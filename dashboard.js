@@ -22,6 +22,14 @@ var fallImage = document.getElementsByTagName('img')[3];
 fallImage.src = "https://unsplash.it/200?image=924";
 fallImage.title = "Fall Trees"; 
 
+//alternate way
+
+// var images = document.querySelectorAll('img');
+// images[0].src = 'URL';
+// images[1].src = 'URL';
+// images[2].src = 'URL';
+// images[3].src = 'URL';
+
 // 3. Below each dashboard image, there's a season/quarter name. Below those, there are three dots. Replace those three dots with a randomly generated number formatted as currency, like $12,589.00.
 
 function _randomCurrency(max) {
@@ -97,16 +105,26 @@ arrayObjects = Array.from(arrayObjects).map(function(arrayObject) {
        department: arrayObject.children[3].innerHTML,
        client: arrayObject.children[4].innerHTML,
    }
-   rowOfObjects.push(rowOfObject)
+   rowOfObjects.push(rowOfObject) // push new objects into the array 
 })
 
 console.log(arrayObjects);
 
+//alternate way
+
+var data = [];
+var rows = document.querySelectorAll('tbody tr');
+
+rows.forEach(function(row) {
+    var object = {};
+    object.id = Number(row.children[0].innerText.replace(',', ''));
+    object.firstName = row.children[1].innerText;
+    object.lastName = row.children[2].innerText;
+    object.department = row.children[3].innerText;
+    object.client = row.children[4].innerText;
+
+});
+
 // 10. Make each word in the table capitalized.
 
-var tableData = document.querySelectorAll('tr td');
-tableData.innerText.toString().toUpperCase();
-
-console.log(tableData);
-
-//cant figure out how to turn innerText into a string to target! 
+document.querySelector('.table').classList.add('text-capitalize'); 
