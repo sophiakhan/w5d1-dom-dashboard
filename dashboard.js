@@ -123,6 +123,8 @@ rows.forEach(function(row) {
     object.department = row.children[3].innerText;
     object.client = row.children[4].innerText;
 
+    data.push(object); 
+
 });
 
 // 10. Make each word in the table capitalized.
